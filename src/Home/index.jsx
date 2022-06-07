@@ -68,7 +68,7 @@ export function Home() {
   
   const loading = true
 
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbDN5eTZnejkwMDAwNXd1cjVxb2NvdGg0IiwiaWF0IjoxNjU0NTcwNDMzLCJleHAiOjE2NTQ2NTY4MzN9.8OkLhccgopODUkdbmtmPNiSaSir93ovUrdJZnkvnsXw'
+  const token = ''
 
   async function getData(){
     const res = await axios.get('http://localhost:9901/tweets',{
@@ -81,7 +81,7 @@ export function Home() {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [loading])
   return (
     <>
     <TeewtForm/>
