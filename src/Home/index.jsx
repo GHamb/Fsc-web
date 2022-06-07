@@ -13,7 +13,7 @@ function TweetForm({loggedInUser, OnSuccess}){
      onSubmit: async (values, form ) => {
          await axios({
            method:'post',
-           url:'http://localhost:9901/tweets',
+           url:`${import.meta.env.VITE_API_HOST}/tweets`,
            headers:{
             'authorization': `Bearer ${loggedInUser.accessToken}`
            },
@@ -99,7 +99,7 @@ export function Home({loggedInUser}) {
   
 
   async function getData(){
-    const res = await axios.get('http://localhost:9901/tweets',{
+    const res = await axios.get(`${import.meta.env.VITE_API_HOST}/tweets`,{
       headers:{
         'authorization': `Bearer ${loggedInUser.accessToken}`
       }
