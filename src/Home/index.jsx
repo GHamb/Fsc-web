@@ -40,7 +40,7 @@ function TweetForm({loggedInUser, OnSuccess}){
   return(
     <div className='border-bottom border-silver p-4 space-y-6'>
       <div className='flex p-4 space-x-5'>
-        <img src="src/avatar.png" alt="" className='w-7' />
+        <img src="./avatar.png" alt="" className='w-7' />
         <h1 className='font-bold text-xl '>pagina Inicial</h1>
 
       </div>
