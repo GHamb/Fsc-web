@@ -115,7 +115,7 @@ export function Home({loggedInUser}) {
     <>
     <TweetForm loggedInUser={loggedInUser} OnSuccess={getData}/>
       {data.length && data.map(tweet =>(
-        <Tweet key={tweet.id} name={tweet.user.name} username={tweet.user.username} avatar="src/avatar.png">
+        <Tweet key={tweet.id} name={tweet.user.name} username={tweet.user.username} avatar={avatar}>
           {tweet.text}
         </Tweet>
 
